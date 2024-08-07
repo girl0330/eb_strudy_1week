@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.servletBoardProject.board.BoardMapper">
+    <select id="selectList" resultType="com.study.servletBoardProject.dto.BoardDTO">
+        SELECT board_id,
+               category_id,
+               writer,
+               password,
+               title,
+               content,
+               view_count,
+               system_uplode_datetime,
+               system_update_datetime
+        FROM board_info
+    </select>
+</mapper>
